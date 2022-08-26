@@ -27,6 +27,12 @@
   outline: 7px solid var(--main-yellow-color);
 }
 
+/* remove focus for mouse */
+.choice-container:focus:not(:focus-visible) {
+  outline: 0;
+  box-shadow: none;
+}
+
 .choice-container:hover {
   cursor: pointer;
   box-shadow: 0 0.4rem 1.4rem 0 var(--main-blue-color);
