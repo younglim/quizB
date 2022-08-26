@@ -153,7 +153,7 @@ choices.forEach((choice) => {
     if (classToApply === 'correct') {
       incrementScore(SCORE_POINTS);
     }
-    blackOut();
+    disableClicks();
 
     selectedChoice.classList.add(classToApply);
 
@@ -197,7 +197,7 @@ function setUpActions() {
   });
 }
 
-function blackOut() {
+function disableClicks() {
   if (score > 300) {
     var noOfChoicBtns = document.querySelectorAll('.choice-container').length;
 
