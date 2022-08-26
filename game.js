@@ -167,35 +167,33 @@ choices.forEach((choice) => {
 //Keyboard listeners
 var choiceList = document.querySelector('.choice-list');
 
-function setUpActions() {
-  choiceList.addEventListener('keydown', (e) => {
-    if (e.key === ' ' || e.key === 'Enter' || e.key === 'Spacebar') {
-      toggleBtn(e.target);
+choiceList.addEventListener('keydown', (e) => {
+  if (e.key === ' ' || e.key === 'Enter' || e.key === 'Spacebar') {
+    toggleBtn(e.target);
 
-      if (!acceptingAnswers) return;
+    if (!acceptingAnswers) return;
 
-      acceptingAnswers = false;
-      const selectedChoice = e.target;
+    acceptingAnswers = false;
+    const selectedChoice = e.target;
 
-      const selectedAnswer = selectedChoice.dataset['number'];
+    const selectedAnswer = selectedChoice.dataset['number'];
 
-      let classToApply =
-        selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
+    let classToApply =
+      selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
 
-      if (classToApply === 'correct') {
-        incrementScore(SCORE_POINTS);
-      }
-
-      selectedChoice.classList.add(classToApply);
-
-      setTimeout(() => {
-        selectedChoice.classList.remove(classToApply);
-
-        getNewQuestion();
-      }, 1000);
+    if (classToApply === 'correct') {
+      incrementScore(SCORE_POINTS);
     }
-  });
-}
+
+    selectedChoice.classList.add(classToApply);
+
+    setTimeout(() => {
+      selectedChoice.classList.remove(classToApply);
+
+      getNewQuestion();
+    }, 1000);
+  }
+});
 
 function disableClicks() {
   if (score > 300) {
