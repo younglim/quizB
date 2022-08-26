@@ -205,13 +205,6 @@ function setUpActions() {
   });
 }
 
-// function toggleBtn(ele) {
-//   ele.setAttribute(
-//     'aria-pressed',
-//     ele.getAttribute('aria-pressed') === 'true' ? 'false' : 'true'
-//   );
-// }
-
 function blackOut() {
   if (score > 300) {
     var noOfChoicBtns = document.querySelectorAll('.choice-container').length;
