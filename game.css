@@ -1,73 +1,77 @@
 .container {
-    align-items: center;
-    text-align: center;
-    justify-content: center;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
 }
 
 .choice-container {
-    display: flex;
-    margin-bottom: 0.8rem;
-    border-radius: 4px;
-    background: var(--main-blue-color);
-    font-size: 3rem;
+  display: flex;
+  margin-bottom: 0.8rem;
+  border-radius: 4px;
+  background: var(--main-blue-color);
+  font-size: 3rem;
+}
+
+.choice-container:focus {
+  outline: 7px solid var(--main-yellow-color);
 }
 
 .choice-container:hover {
-    cursor: pointer;
-    box-shadow: 0 0.4rem 1.4rem 0 var(--main-blue-color);
-    transform: scale(1.02);
-    transform: transform 100ms;
+  cursor: pointer;
+  box-shadow: 0 0.4rem 1.4rem 0 var(--main-blue-color);
+  transform: scale(1.02);
+  transform: transform 100ms;
 }
 
 .choice-text {
-    padding: 2rem;
-    font-size: 2.5rem;
-    color: #fff;
-    width: 100%;
+  padding: 2rem;
+  font-size: 2.5rem;
+  color: #fff;
+  width: 100%;
 }
 
 .correct {
-    background: var(--main-green-color);
+  background: var(--main-green-color);
 }
 
 .incorrect {
-    background: var(--main-red-color);
+  background: var(--main-red-color);
 }
 
 /* HUD */
 
 #hud {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
 }
 
-.hud-item p{
-    font-size: 2.5rem;
+.hud-item p {
+  font-size: 2.5rem;
 }
 
 .hud-main-text {
-    text-align: center;
+  text-align: center;
 }
 
 #vip {
-    font-size: 3rem;
-    color: #dcdcdc;
-    align-items: center;
-    padding: 0 10px;
-    border-radius: 4px;
-    margin: 20px;
+  font-size: 3rem;
+  color: #dcdcdc;
+  align-items: center;
+  padding: 0 10px;
+  border-radius: 4px;
+  margin: 20px;
 }
 
 /* Media Queries */
 
 @media only screen and (max-width: 600px) {
-    body {
-        height: 100vh !important;
-    }
+  body {
+    height: 100vh !important;
+  }
 
-    h1 {
-        font-size: 3rem;
-    }
+  h1 {
+    font-size: 3rem;
+  }
 }
