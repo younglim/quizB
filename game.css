@@ -4,9 +4,13 @@
   justify-content: center;
 }
 
+.choice-list {
+  margin: 0 70px;
+  min-width: fit-content;
+}
+
 .choice-container {
   display: flex;
-  margin-bottom: 0.8rem;
   border-radius: 4px;
   background: var(--main-blue-color);
   font-size: 3rem;
@@ -14,7 +18,9 @@
   align-items: center;
   padding: 10px;
   border-radius: 4px;
-  margin: 20px;
+  margin: 30px auto 0.8rem auto;
+  max-width: 700px;
+  width: 500px;
 }
 
 .choice-container:focus {
@@ -26,13 +32,6 @@
   box-shadow: 0 0.4rem 1.4rem 0 var(--main-blue-color);
   transform: scale(1.02);
   transform: transform 100ms;
-}
-
-.choice-text {
-  padding: 2rem;
-  font-size: 2.5rem;
-  color: #fff;
-  width: 100%;
 }
 
 .correct {
@@ -69,5 +68,9 @@
 
   h1 {
     font-size: 3rem;
+  }
+
+  .choice-container {
+    width: 200px;
   }
 }
