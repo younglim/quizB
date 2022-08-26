@@ -10,6 +10,11 @@
   border-radius: 4px;
   background: var(--main-blue-color);
   font-size: 3rem;
+  color: #fefefe;
+  align-items: center;
+  padding: 10px;
+  border-radius: 4px;
+  margin: 20px;
 }
 
 .choice-container:focus {
@@ -53,15 +58,6 @@
 
 .hud-main-text {
   text-align: center;
-}
-
-#vip {
-  font-size: 3rem;
-  color: #dcdcdc;
-  align-items: center;
-  padding: 0 10px;
-  border-radius: 4px;
-  margin: 20px;
 }
 
 /* Media Queries */
