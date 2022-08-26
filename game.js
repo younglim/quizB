@@ -168,14 +168,6 @@ choices.forEach((choice) => {
 var choiceList = document.querySelector('.choice-list');
 
 function setUpActions() {
-  let btns = document.querySelectorAll('#vip');
-
-  btns.forEach((btn, idx) => {
-    btn.setAttribute('role', 'button');
-    btn.setAttribute('aria-pressed', 'false');
-    btn.setAttribute('tabindex', '0');
-  });
-
   choiceList.addEventListener('keydown', (e) => {
     if (e.key === ' ' || e.key === 'Enter' || e.key === 'Spacebar') {
       toggleBtn(e.target);
