@@ -200,12 +200,6 @@ function setUpActions() {
         selectedChoice.classList.remove(classToApply);
 
         getNewQuestion();
-
-        // reset aria-pressed to false after next question loads.
-        e.target.setAttribute(
-          'aria-pressed',
-          e.target.getAttribute('aria-pressed') === 'false'
-        );
       }, 1000);
     }
   });
