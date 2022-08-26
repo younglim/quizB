@@ -145,7 +145,6 @@ choices.forEach((choice) => {
     acceptingAnswers = false;
     const selectedChoice = e.target;
     const selectedAnswer = selectedChoice.dataset['number'];
-    console.log(selectedChoice.dataset['number']);
 
     let classToApply =
       selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
@@ -160,6 +159,7 @@ choices.forEach((choice) => {
     setTimeout(() => {
       selectedChoice.classList.remove(classToApply);
       getNewQuestion();
+      document.getElementById('question').focus();
     }, 1000);
   });
 });
@@ -169,8 +169,6 @@ var choiceList = document.querySelector('.choice-list');
 
 choiceList.addEventListener('keydown', (e) => {
   if (e.key === ' ' || e.key === 'Enter' || e.key === 'Spacebar') {
-    toggleBtn(e.target);
-
     if (!acceptingAnswers) return;
 
     acceptingAnswers = false;
@@ -189,8 +187,8 @@ choiceList.addEventListener('keydown', (e) => {
 
     setTimeout(() => {
       selectedChoice.classList.remove(classToApply);
-
       getNewQuestion();
+      document.getElementById('question').focus();
     }, 1000);
   }
 });
