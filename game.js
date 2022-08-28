@@ -1,6 +1,6 @@
 const question = document.querySelector('#question');
 const choices = Array.from(document.querySelectorAll('.choice-container'));
-const prgoressText = document.querySelector('#progressText');
+const progressText = document.querySelector('#progressText');
 const scoreText = document.querySelector('#score');
 
 let currentQuestion = {};
@@ -122,7 +122,7 @@ getNewQuestion = () => {
 
   // notes question x of max qn, and it increments by one each time
   questionCounter++;
-  prgoressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`;
+  progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`;
 
   const questionsIndex = Math.floor(Math.random() * availableQuestions.length);
   currentQuestion = availableQuestions[questionsIndex];
