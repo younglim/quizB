@@ -212,6 +212,24 @@ function srSpeak(text, priority) {
   }, 1000);
 }
 
+// countdown
+
+var counter = 15;
+
+setInterval(function () {
+  counter--;
+
+  if (counter >= 0) {
+    id = document.getElementById('timer');
+    id.innerHTML = counter;
+  }
+
+  if (counter === 0) {
+    id.innerHTML = 'TIMEOUT!';
+    window.location.href = 'highscores.html';
+  }
+}, 1000);
+
 incrementScore = (num) => {
   score += num;
   scoreText.innerText = score;
