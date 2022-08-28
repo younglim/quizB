@@ -12,16 +12,28 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Viga&display=swap"
       rel="stylesheet"
     />
+    <script
+      async
+      src="https://api.countapi.xyz/hit/google.com/1d486d7e-d8c3-4ec7-aa8b-c2db667f4c4f?callback=websiteVisits"
+    ></script>
   </head>
   <body>
     <div class="container">
       <div id="home" class="flex-column">
         <h1>Are you ready?</h1>
-        <a href="game.html" class="btn">Play</a>
+        <a id="play" href="" class="btn">Play</a>
         <a href="highscores.html" id="highscores-btn" class="btn"
-          >High Scores</a
-        >
+          >High Scores
+        </a>
+        <br />
+        <h1 class="visibility-hidden">
+          Visito number <span id="visitNo"> x</span>
+        </h1>
       </div>
     </div>
+    <script src="index.js"></script>
   </body>
 </html>
+
+<!-- https://ckodes.github.io/quizB/ -->
+<!-- {"namespace":"google.com","key":"1d486d7e-d8c3-4ec7-aa8b-c2db667f4c4f","value":0} -->
