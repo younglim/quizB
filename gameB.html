@@ -19,16 +19,16 @@
       <div id="game" class="justify-center flex-column">
         <div id="hud">
           <div class="hud-item">
-            <p id="progressText">Question</p>
+            <p id="readScore" tabindex="1">Score</p>
+            <p tabindex="2" class="hud-main-text" id="score">0</p>
           </div>
 
           <div class="hud-item">
-            <p>Score</p>
-            <h1 class="hud-main-text" id="score">0</h1>
+            <p tabindex="3" id="progressText">Question</p>
           </div>
         </div>
 
-        <h1 id="question" tabindex="1">What is the answer to this question?</h1>
+        <h1 id="question" tabindex="3">What is the answer to this question?</h1>
         <div class="choice-list">
           <button class="choice-container" data-number="1">Choice 1</button>
           <button class="choice-container" data-number="2">Choice 2</button>
