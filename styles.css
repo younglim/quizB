@@ -17,6 +17,10 @@
   font-size: 62.5%;
 }
 
+.visibility-hidden {
+  visibility: hidden;
+}
+
 h1 {
   font-size: 5.4rem;
   margin-bottom: 5rem;
