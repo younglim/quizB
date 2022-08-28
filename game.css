@@ -35,7 +35,6 @@
 
 .choice-container:hover {
   cursor: pointer;
-  box-shadow: 0 0.4rem 1.4rem 0 var(--main-blue-color);
   transform: scale(1.02);
   transform: transform 100ms;
 }
