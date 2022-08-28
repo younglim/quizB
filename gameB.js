@@ -179,17 +179,38 @@ choiceList.addEventListener('keydown', (e) => {
 
     if (classToApply === 'correct') {
       incrementScore(SCORE_POINTS);
+      selectedChoice.classList.add(classToApply);
+      srSpeak('correct answer', 'assertive');
+    } else {
+      selectedChoice.classList.add(classToApply);
+      srSpeak('wrong answer', 'assertive');
     }
-
-    selectedChoice.classList.add(classToApply);
 
     setTimeout(() => {
       selectedChoice.classList.remove(classToApply);
       getNewQuestion();
-      document.getElementById('question').focus();
+      document.getElementById('readScore').focus();
     }, 1000);
   }
 });
+
+function srSpeak(text, priority) {
+  var el = document.createElement('div');
+  var id = 'speak-' + Date.now();
+  el.setAttribute('id', id);
+  el.setAttribute('aria-live', priority || 'polite');
+  el.classList.add('visually-hidden');
+  document.body.appendChild(el);
+
+  window.setTimeout(function () {
+    document.getElementById(id).innerHTML = text;
+    console.log(text);
+  }, 100);
+
+  window.setTimeout(function () {
+    document.body.removeChild(document.getElementById(id));
+  }, 1000);
+}
 
 incrementScore = (num) => {
   score += num;
