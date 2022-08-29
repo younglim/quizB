@@ -214,7 +214,7 @@ function srSpeak(text, priority) {
 
 // countdown
 
-var counter = 15;
+var counter = 60;
 
 setInterval(function () {
   counter--;
