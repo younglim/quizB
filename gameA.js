@@ -123,7 +123,7 @@ getNewQuestion = () => {
 
   // notes question x of max qn, and it increments by one each time
   questionCounter++;
-  progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`;
+  progressText.innerText = `${questionCounter} of ${MAX_QUESTIONS}`;
 
   const questionsIndex = Math.floor(Math.random() * availableQuestions.length);
   currentQuestion = availableQuestions[questionsIndex];
@@ -243,13 +243,13 @@ setInterval(function () {
 
   if (counter >= 0) {
     id = document.getElementById('timer');
-    id.innerHTML = counter;
+    id.innerHTML = `00:${counter}`;
   }
 
   if (counter === 0) {
     id.innerHTML = 'TIMEOUT!';
     localStorage.setItem('mostRecentScore', score);
-    window.location.href = 'end.html';
+    // window.location.href = 'end.html';
   }
 }, 1000);
 
