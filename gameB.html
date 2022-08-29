@@ -19,17 +19,19 @@
       <div id="game" class="justify-center flex-column">
         <div id="hud">
           <div class="hud-item">
-            <p class="hud-main-text" id="timer">60</p>
+            <p>Question</p>
+            <p tabindex="3" id="progressText">Question</p>
+          </div>
+
+          <div class="hud-item">
+            <p>Seconds Left</p>
+            <p class="hud-main-text" id="timer">00:60</p>
           </div>
 
           <div class="hud-item">
             <!-- @Royce, tab order starts from score after a new question is loaded -->
             <p id="readScore" tabindex="1">Score</p>
             <p tabindex="2" class="hud-main-text" id="score">0</p>
-          </div>
-
-          <div class="hud-item">
-            <p tabindex="3" id="progressText">Question</p>
           </div>
         </div>
 
