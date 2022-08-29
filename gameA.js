@@ -11,7 +11,7 @@ let availableQuestions = [];
 // List of questions
 let questions = [
   {
-    question: 'Sample question, answer is choice 1?',
+    question: 'Sample question, answer is choice 1',
     choice1: 'Choice 1',
     choice2: 'Choice 2',
     choice3: 'Choice 3',
@@ -20,7 +20,7 @@ let questions = [
   },
 
   {
-    question: 'Sample question, answer is choice 3?',
+    question: 'Sample question, answer is choice 3',
     choice1: 'Choice 1',
     choice2: 'Choice 2',
     choice3: 'Choice 3',
@@ -29,7 +29,7 @@ let questions = [
   },
 
   {
-    question: 'Sample question, answer is choice 4?',
+    question: 'Sample question, answer is choice 4',
     choice1: 'Choice 1',
     choice2: 'Choice 2',
     choice3: 'Choice 3',
@@ -38,7 +38,7 @@ let questions = [
   },
 
   {
-    question: 'Sample question, answer is choice 3?',
+    question: 'Sample question, answer is choice 3',
     choice1: 'Choice 1',
     choice2: 'Choice 2',
     choice3: 'Choice 3',
@@ -47,7 +47,7 @@ let questions = [
   },
 
   {
-    question: 'Sample question, answer is choice 2?',
+    question: 'Sample question, answer is choice 2',
     choice1: 'Choice 1',
     choice2: 'Choice 2',
     choice3: 'Choice 3',
@@ -56,7 +56,7 @@ let questions = [
   },
 
   {
-    question: 'Sample question, answer is choice 1?',
+    question: 'Sample question, answer is choice 1',
     choice1: 'Choice 1',
     choice2: 'Choice 2',
     choice3: 'Choice 3',
@@ -65,7 +65,7 @@ let questions = [
   },
 
   {
-    question: 'Sample question, answer is choice 2?',
+    question: 'Sample question, answer is choice 2',
     choice1: 'Choice 1',
     choice2: 'Choice 2',
     choice3: 'Choice 3',
@@ -74,7 +74,7 @@ let questions = [
   },
 
   {
-    question: 'Sample question, answer is choice 4?',
+    question: 'Sample question, answer is choice 4',
     choice1: 'Choice 1',
     choice2: 'Choice 2',
     choice3: 'Choice 3',
@@ -83,7 +83,7 @@ let questions = [
   },
 
   {
-    question: 'Sample question, answer is choice 1?',
+    question: 'Sample question, answer is choice 1',
     choice1: 'Choice 1',
     choice2: 'Choice 2',
     choice3: 'Choice 3',
@@ -92,7 +92,7 @@ let questions = [
   },
 
   {
-    question: 'Sample question, answer is choice 1?',
+    question: 'Sample question, answer is choice 1',
     choice1: 'Choice 1',
     choice2: 'Choice 2',
     choice3: 'Choice 3',
