@@ -1,35 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>End</title>
-        <link rel="stylesheet" href="styles.css">
-        <script src="https://kit.fontawesome.com/dbbdb8b0b9.js" crossorigin="anonymous"></script>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Viga&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/dbbdb8b0b9.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Viga&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <div class="container">
-        <div id="end" class="flex-center flex-column">
-            <h1 id="finalScore">0</h1>
-            <form action="" class="end-form-container">
-                <h2 id="end-text">Enter your name to save your score.</h2>
-                <label for="playername">Your Name</label>
-                <input type="text" name="playername" id="username">
-                <button 
-                class="btn" 
-                id="saveScoreBtn" 
-                type="submit" 
-                onclick="saveHighScore(event)" 
-                disabled>Save</button>
-            </form>
-            <button onclick="location.href = '/game.html';" class="btn">Play Again</button>
-            <button onclick="location.href = '/';" class="btn">Homepage</button>
-        </div>
+      <div id="end" class="flex-center flex-column">
+        <h1 id="finalScore">0</h1>
+        <form action="" class="end-form-container">
+          <h2 id="end-text">Enter your name to save your score.</h2>
+          <label for="playername">Your Name</label>
+          <input type="text" name="playername" id="username" />
+          <button
+            class="btn"
+            id="saveScoreBtn"
+            type="submit"
+            onclick="saveHighScore(event)"
+            disabled
+          >
+            Save
+          </button>
+        </form>
+        <button onclick="location.href = 'game.html';" class="btn">
+          Play Again
+        </button>
+        <button onclick="location.href = 'index.html';" class="btn">
+          Homepage
+        </button>
+      </div>
     </div>
     <script src="end.js"></script>
-</body>
+  </body>
 </html>
