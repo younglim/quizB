@@ -226,6 +226,7 @@ setInterval(function () {
 
   if (counter === 0) {
     id.innerHTML = 'TIMEOUT!';
+    localStorage.setItem('mostRecentScore', score);
     window.location.href = 'end.html';
   }
 }, 1000);
