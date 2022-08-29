@@ -228,7 +228,7 @@ function srSpeak(text, priority) {
 
 // countdown
 
-var counter = 15;
+var counter = 60;
 
 setInterval(function () {
   counter--;
@@ -241,7 +241,7 @@ setInterval(function () {
   if (counter === 0) {
     id.innerHTML = 'TIMEOUT!';
     localStorage.setItem('mostRecentScore', score);
-    window.location.href = 'end.html';
+    // window.location.href = 'end.html';
   }
 }, 1000);
 
