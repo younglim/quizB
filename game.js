@@ -8,6 +8,7 @@ let acceptingAnswers = true;
 let score = 0;
 let availableQuestions = [];
 
+// List of questions
 let questions = [
   {
     question: 'Sample question, answer is choice 1?',
@@ -152,6 +153,8 @@ choices.forEach((choice) => {
     if (classToApply === 'correct') {
       incrementScore(SCORE_POINTS);
     }
+
+    // Once score is more than 300, disable mouse clicks
     disableClicks();
 
     selectedChoice.classList.add(classToApply);
@@ -182,6 +185,8 @@ choiceList.addEventListener('keydown', (e) => {
     if (classToApply === 'correct') {
       incrementScore(SCORE_POINTS);
       selectedChoice.classList.add(classToApply);
+
+      // @Royce, this is where screen reader reads out correct or wrong depending on the selected answer
       srSpeak('correct answer', 'assertive');
     } else {
       selectedChoice.classList.add(classToApply);
@@ -191,11 +196,14 @@ choiceList.addEventListener('keydown', (e) => {
     setTimeout(() => {
       selectedChoice.classList.remove(classToApply);
       getNewQuestion();
+
+      //@Royce, this is where focus is reset to readScore id so that score is read when a new question is called
       document.getElementById('readScore').focus();
     }, 1000);
   }
 });
 
+// Disable clicks for when score is more than 300
 function disableClicks() {
   if (score > 300) {
     var noOfChoicBtns = document.querySelectorAll('.choice-container').length;
@@ -208,6 +216,7 @@ function disableClicks() {
   }
 }
 
+// @Royce, this is the code that creates a new div to hold the sentence for the screen reader to read
 function srSpeak(text, priority) {
   var el = document.createElement('div');
   var id = 'speak-' + Date.now();
@@ -227,7 +236,6 @@ function srSpeak(text, priority) {
 }
 
 // countdown
-
 var counter = 60;
 
 setInterval(function () {
