@@ -27,6 +27,17 @@
   outline: 7px solid var(--main-yellow-color);
 }
 
+@font-face {
+  font-family: sevenSegment;
+  src: url(seven-segment.ttf);
+}
+
+#timer {
+  font-family: sevenSegment;
+  font-size: 10rem;
+  width: 500px;
+}
+
 /* remove focus for mouse */
 .choice-container:focus:not(:focus-visible) {
   outline: 0;
@@ -51,9 +62,10 @@
 
 #hud {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-evenly;
   text-align: center;
+  align-items: center;
 }
 
 .hud-item p {
@@ -62,6 +74,10 @@
 
 .hud-main-text {
   text-align: center;
+}
+
+#question {
+  margin-top: 4rem;
 }
 
 /* Media Queries */
