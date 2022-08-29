@@ -226,7 +226,7 @@ setInterval(function () {
 
   if (counter === 0) {
     id.innerHTML = 'TIMEOUT!';
-    window.location.href = 'highscores.html';
+    window.location.href = 'end.html';
   }
 }, 1000);
 
