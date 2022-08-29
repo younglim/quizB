@@ -118,7 +118,7 @@ getNewQuestion = () => {
     localStorage.setItem('mostRecentScore', score);
 
     // keeps track of score
-    return window.location.assign('/end.html');
+    return window.location.assign('end.html');
   }
 
   // notes question x of max qn, and it increments by one each time
