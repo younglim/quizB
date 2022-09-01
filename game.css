@@ -6,21 +6,20 @@
 
 .choice-list {
   margin: 0 70px;
-  min-width: fit-content;
 }
 
 .choice-container {
   display: flex;
   border-radius: 4px;
   background: var(--main-blue-color);
-  font-size: 3rem;
+  /* font-size: 3rem; */
   color: #fefefe;
   align-items: center;
   padding: 10px;
   border-radius: 4px;
   margin: 30px auto 0.8rem auto;
   max-width: 700px;
-  width: 500px;
+  width: 100%;
 }
 
 .choice-container:focus {
@@ -32,10 +31,10 @@
   src: url(seven-segment.ttf);
 }
 
-#timer {
+.timer {
   font-family: sevenSegment;
   font-size: 10rem;
-  width: 500px;
+  width: 360px;
 }
 
 /* remove focus for mouse */
@@ -60,7 +59,8 @@
 
 /* HUD */
 
-#hud {
+#hud,
+#hud_desktop {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -68,30 +68,52 @@
   align-items: center;
 }
 
-.hud-item p {
-  font-size: 2.5rem;
-}
-
-.hud-main-text {
-  text-align: center;
+.mobile {
+  display: none;
 }
 
 #question {
   margin-top: 4rem;
+  font-size: 5rem;
+}
+
+#game {
+  width: 100%;
 }
 
 /* Media Queries */
 
 @media only screen and (max-width: 600px) {
-  body {
-    height: 100vh !important;
+  #question {
+    font-size: 2rem;
   }
 
-  h1 {
-    font-size: 3rem;
+  #hud_desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+  }
+
+  .timer {
+    width: 100%;
+    font-size: 5rem;
+  }
+
+  .hud-item {
+    margin-top: 20px;
   }
 
   .choice-container {
-    width: 200px;
+    font-size: 2rem;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .choice-list {
+    margin: auto 30px;
   }
 }
