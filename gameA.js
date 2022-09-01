@@ -155,6 +155,9 @@ choices.forEach((choice) => {
 
     if (classToApply === 'correct') {
       incrementScore(SCORE_POINTS);
+      selectedChoice.innerText = 'CORRECT!';
+    } else {
+      selectedChoice.innerText = 'INCORRECT!';
     }
 
     // Once score is more than 300, disable mouse clicks
@@ -191,9 +194,11 @@ choiceList.addEventListener('keydown', (e) => {
 
       // @Royce, this is where screen reader reads out correct or wrong depending on the selected answer
       srSpeak('correct answer', 'assertive');
+      selectedChoice.innerText = 'CORRECT!';
     } else {
       selectedChoice.classList.add(classToApply);
       srSpeak('wrong answer', 'assertive');
+      selectedChoice.innerText = 'INCORRECT!';
     }
 
     setTimeout(() => {
