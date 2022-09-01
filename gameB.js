@@ -203,7 +203,7 @@ choiceList.addEventListener('keydown', (e) => {
       getNewQuestion();
 
       //@Royce, this is where focus is reset to readScore id so that score is read when a new question is called
-      document.getElementById('readScore').focus();
+      document.getElementById('question').focus();
     }, 1000);
   }
 });
