@@ -21,19 +21,36 @@
     <div class="container">
       <div id="end" class="flex-center flex-column">
         <h1 id="finalScore">0</h1>
-        <form action="" class="end-form-container">
+
+        <form
+          action="https://sheetdb.io/api/v1/u0xovndqch3q5"
+          class="end-form-container"
+          method="post"
+          id="quiz_score"
+          name="a11yKopi"
+        >
           <h2 id="end-text">Enter your name to submit your score.</h2>
+
           <label for="username">Your Name</label>
-          <input type="text" name="name" id="username" />
+          <input type="text" name="data[name]" id="username" />
+
           <button
             class="btn"
             id="saveScoreBtn"
             type="submit"
-            onclick="saveHighScore(event)"
+            onclick="submitScore()"
             disabled
           >
             Submit Score
           </button>
+          <label for="playerscore">Your Score</label>
+          <input
+            type="text"
+            name="data[score]"
+            id="playerscore"
+            value="0"
+            aria-hidden="true"
+          />
         </form>
       </div>
     </div>
