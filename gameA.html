@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, height=device-height, initial-scale=1.0"
+    />
     <title>Game A</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="game.css" />
@@ -18,29 +21,48 @@
     <div class="container">
       <div id="game" class="justify-center flex-column">
         <div id="hud">
+          <div class="hud-item mobile">
+            <p>Seconds Left</p>
+            <p class="hud-main-text timer">00:60</p>
+          </div>
+        </div>
+
+        <div id="hud">
+          <div class="hud-item mobile">
+            <p>Question</p>
+            <p tabindex="3" class="progress">Question</p>
+          </div>
+
+          <div class="hud-item mobile">
+            <p id="readScore" tabindex="1">Score</p>
+            <p tabindex="2" class="hud-main-text scoretext" id="score">0</p>
+          </div>
+        </div>
+
+        <div id="hud_desktop">
           <div class="hud-item">
             <p>Question</p>
-            <p tabindex="3" id="progressText">Question</p>
+            <p tabindex="3" class="progress">Question</p>
           </div>
 
           <div class="hud-item">
             <p>Seconds Left</p>
-            <p class="hud-main-text" id="timer">00:60</p>
+            <p class="hud-main-text timer">00:60</p>
           </div>
 
           <div class="hud-item">
             <!-- @Royce, tab order starts from score after a new question is loaded -->
             <p id="readScore" tabindex="1">Score</p>
-            <p tabindex="2" class="hud-main-text" id="score">0</p>
+            <p tabindex="2" class="hud-main-text scoretext" id="score">0</p>
           </div>
         </div>
 
-        <h1 id="question" tabindex="4">What is the answer to this question?</h1>
+        <p id="question" tabindex="4">What is the answer to this question?</p>
         <div class="choice-list">
-          <button class="choice-container" data-number="1">Choice 1</button>
-          <button class="choice-container" data-number="2">Choice 2</button>
-          <button class="choice-container" data-number="3">Choice 3</button>
-          <button class="choice-container" data-number="4">Choice 4</button>
+          <button class="choice-container btn" data-number="1">Choice 1</button>
+          <button class="choice-container btn" data-number="2">Choice 2</button>
+          <button class="choice-container btn" data-number="3">Choice 3</button>
+          <button class="choice-container btn" data-number="4">Choice 4</button>
         </div>
       </div>
     </div>
