@@ -1,7 +1,7 @@
 const question = document.querySelector('#question');
 const choices = Array.from(document.querySelectorAll('.choice-container'));
-const progressText = document.querySelector('#progressText');
-const scoreText = document.querySelector('#score');
+const progressText = document.getElementsByClassName('progress');
+const scoreText = document.getElementsByClassName('scoretext');
 
 let currentQuestion = {};
 let acceptingAnswers = true;
@@ -123,7 +123,10 @@ getNewQuestion = () => {
 
   // notes question x of max qn, and it increments by one each time
   questionCounter++;
-  progressText.innerText = `${questionCounter} of ${MAX_QUESTIONS}`;
+
+  for (var i = 0; i < progressText.length; i++) {
+    progressText[i].innerText = `${questionCounter} of ${MAX_QUESTIONS}`;
+  }
 
   const questionsIndex = Math.floor(Math.random() * availableQuestions.length);
   currentQuestion = availableQuestions[questionsIndex];
@@ -153,6 +156,7 @@ choices.forEach((choice) => {
     if (classToApply === 'correct') {
       incrementScore(SCORE_POINTS);
     }
+
     selectedChoice.classList.add(classToApply);
 
     setTimeout(() => {
@@ -219,27 +223,40 @@ function srSpeak(text, priority) {
 }
 
 // countdown
-
 var counter = 60;
 
 setInterval(function () {
   counter--;
 
-  if (counter >= 0) {
-    id = document.getElementById('timer');
-    id.innerHTML = `00:${counter}`;
+  const timer = document.getElementsByClassName('timer');
+
+  if (counter >= 10) {
+    for (var i = 0; i < timer.length; i++) {
+      timer[i].innerHTML = `00:${counter}`;
+    }
+  }
+
+  if (counter < 10) {
+    for (var i = 0; i < timer.length; i++) {
+      timer[i].innerHTML = `00:0${counter}`;
+    }
   }
 
   if (counter === 0) {
-    id.innerHTML = 'TIMEOUT!';
-    localStorage.setItem('mostRecentScore', score);
-    window.location.href = 'end.html';
+    for (var i = 0; i < timer.length; i++) {
+      timer[i].innerHTML = 'TIMEOUT';
+      localStorage.setItem('mostRecentScore', score);
+      window.open('end.html', '_self');
+    }
   }
 }, 1000);
 
 incrementScore = (num) => {
   score += num;
-  scoreText.innerText = score;
+
+  for (var i = 0; i < scoreText.length; i++) {
+    scoreText[i].innerText = score;
+  }
 };
 
 startGame();
