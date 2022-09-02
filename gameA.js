@@ -20,11 +20,11 @@ let questions = [
   },
 
   {
-    question: 'Which of these is not a vowel',
-    choice1: 'i',
-    choice2: 'u',
-    choice3: 'y',
-    choice4: 'a',
+    question: 'The brother of Adidas founder created what brand?',
+    choice1: 'Das Auto',
+    choice2: 'Reebok',
+    choice3: 'Puma',
+    choice4: 'Saucony',
     answer: 3,
   },
 
@@ -38,11 +38,11 @@ let questions = [
   },
 
   {
-    question: 'Which company did Bill Gates founded?',
-    choice1: 'Apple',
-    choice2: 'TikTok',
-    choice3: 'Microsoft',
-    choice4: 'Samsung',
+    question: 'The unicorn is the national animal of which country?',
+    choice1: 'Latvia',
+    choice2: 'Estonia',
+    choice3: 'Scotland',
+    choice4: 'Switzerland',
     answer: 3,
   },
 
@@ -74,29 +74,29 @@ let questions = [
   },
 
   {
-    question: 'In LOTR, who accompanied Frodo till the end?',
-    choice1: 'Lady Galadriel',
-    choice2: 'Gandalf',
-    choice3: 'Samdol Chendol',
-    choice4: 'Samwise Gamgee',
+    question: 'What is 4 divided by 2?',
+    choice1: '4',
+    choice2: '3',
+    choice3: '1',
+    choice4: '2',
     answer: 4,
   },
 
   {
     question: 'Which of these is not a country?',
     choice1: 'Africa',
-    choice2: 'Vatican City',
-    choice3: 'Cyprus',
-    choice4: 'Monaco',
+    choice2: 'Mexico',
+    choice3: 'Gemany',
+    choice4: 'Poland',
     answer: 1,
   },
 
   {
     question: 'Which of these is not a cat breed?',
-    choice1: 'Shorty Meow',
+    choice1: 'Chihuahua',
     choice2: 'Maine Coon',
     choice3: 'Ragdoll',
-    choice4: 'Peterbald',
+    choice4: 'British Shorthair',
     answer: 1,
   },
 ];
