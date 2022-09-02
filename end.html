@@ -20,7 +20,8 @@
   <body>
     <div class="container">
       <div id="end" class="flex-center flex-column">
-        <h1 id="finalScore">0</h1>
+        <p class="finalScoreText">Final Score</p>
+        <p id="finalScore">0</p>
 
         <form
           action="https://sheetdb.io/api/v1/cxropn6lu6n8d"
@@ -29,10 +30,8 @@
           id="quiz_score"
           name="a11y-kopi"
         >
-          <h2 id="end-text">Enter your name to submit your score.</h2>
-
-          <label for="username">Your Name</label>
-          <input type="text" name="data[name]" id="username" />
+        <label for="username">Enter name to submit score</label>
+        <input type="text" name="data[name]" id="username" />
 
           <button
             class="btn"
