@@ -251,15 +251,9 @@ setInterval(function () {
 
   const timer = document.getElementsByClassName('timer');
 
-  if (counter >= 10) {
+  if (counter >= 0) {
     for (var i = 0; i < timer.length; i++) {
-      timer[i].innerHTML = `00:${counter}`;
-    }
-  }
-
-  if (counter < 10) {
-    for (var i = 0; i < timer.length; i++) {
-      timer[i].innerHTML = `00:0${counter}`;
+      timer[i].innerHTML = `${counter}`;
     }
   }
 
