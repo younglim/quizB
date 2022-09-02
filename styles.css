@@ -1,11 +1,11 @@
 :root {
-  --main-blue-color: rgb(100, 143, 255);
+  --main-blue-color: #416CDC;
   --main-red-color: rgb(235, 94, 94);
   --main-purple-color: rgb(120, 94, 240);
   --main-yellow-color: rgb(255, 176, 0);
   --main-black-color: rgb(51, 51, 51);
   --main-white-color: rgb(238, 238, 238);
-  --main-green-color: #29a39f;
+  --main-green-color: green;
   --main-font-family: 'Viga';
   background-color: var(--main-white-color);
 }
@@ -20,6 +20,10 @@
 
 .visibility-hidden {
   visibility: hidden;
+}
+
+#play {
+  color: var(--main-white-color);
 }
 
 p {
