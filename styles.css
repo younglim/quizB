@@ -81,6 +81,7 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 3rem;
 }
 
 input {
@@ -89,9 +90,27 @@ input {
   font-size: 1.8rem;
   border: solid;
   border-radius: 5px;
+  width: 100%;
 }
 
-label {
-  font-size: 3rem;
+label{
   margin: 1.5rem;
+}
+
+#end-text {
+  margin: 20px 0px;
+  font-size: 2rem;
+}
+
+label, .finalScoreText{
+  font-size: 3rem;
+}
+
+#finalScore {
+  font-size: 5rem;
+}
+
+#saveScoreBtn {
+  margin-top: 4rem;
+  color: var(--main-white-color)
 }
