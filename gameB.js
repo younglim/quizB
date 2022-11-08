@@ -47,11 +47,11 @@ let questions = [
   },
 
   {
-    question: 'What does the C in our ABC values stand for?',
-    choice1: 'Creative',
-    choice2: 'Collaborative',
-    choice3: 'Committed',
-    choice4: 'Courageous',
+    question: 'Which of these is not a vowel?',
+    choice1: 'a',
+    choice2: 'x',
+    choice3: 'e',
+    choice4: 'u',
     answer: 2,
   },
 
@@ -86,7 +86,7 @@ let questions = [
     question: 'Which of these is not a country?',
     choice1: 'Africa',
     choice2: 'Mexico',
-    choice3: 'Gemany',
+    choice3: 'Germany',
     choice4: 'Poland',
     answer: 1,
   },
