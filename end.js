@@ -10,7 +10,7 @@ const MAX_HIGH_SCORES = 5;
 
 finalScore.innerText = mostRecentScore;
 
-var scoreInput = document.querySelector('input[name="data[score]"]');
+var scoreInput = document.querySelector('input[name="data[Score]"]');
 scoreInput.value = finalScore.innerText;
 
 username.addEventListener('keyup', () => {
