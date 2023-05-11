@@ -17,10 +17,6 @@ username.addEventListener('keyup', () => {
   saveScoreBtn.disabled = !username.value;
 });
 
-function submitScore() {
-  var form = document.getElementById('quiz_score');
-}
-
 // set the target on the form to point to a hidden iframe
 // some browsers need the target set via JavaScript, no idea why...
 document.getElementById('quiz_score').target = 'my-response-iframe';
