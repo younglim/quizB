@@ -25,7 +25,10 @@ var iframe = document.getElementById('my-response-iframe');
 
 if (iframe) {
   iframe.onload = function () {
-    // now you can do stuff, such as displaying a message or redirecting to a new page.
-    window.open('submitted.html', '_self');
+    if (iframe.contentWindow.location.href != "about:blank") {
+      window.open('submitted.html', '_self');
+    } else {
+      console.log("You are not allowed to load blank page directly");
+    }
   }
 }
