@@ -10,7 +10,7 @@ const MAX_HIGH_SCORES = 5;
 
 finalScore.innerText = mostRecentScore;
 
-var scoreInput = document.querySelector('input[name="data[Score]"]');
+var scoreInput = document.querySelector('input[id="playerscore"]');
 scoreInput.value = finalScore.innerText;
 
 username.addEventListener('keyup', () => {
@@ -19,17 +19,17 @@ username.addEventListener('keyup', () => {
 
 function submitScore() {
   var form = document.getElementById('quiz_score');
+}
 
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
+// set the target on the form to point to a hidden iframe
+// some browsers need the target set via JavaScript, no idea why...
+document.getElementById('quiz_score').target = 'my-response-iframe';
+// detect when the iframe reloads
+var iframe = document.getElementById('my-response-iframe');
 
-    fetch(form.action, {
-      method: 'POST',
-      body: new FormData(document.getElementById('quiz_score')),
-    })
-      .then((response) => response.json())
-      .then((html) => {
-        window.open('submitted.html', '_self');
-      });
-  });
+if (iframe) {
+  iframe.onload = function () {
+    // now you can do stuff, such as displaying a message or redirecting to a new page.
+    window.open('submitted.html', '_self');
+  }
 }
