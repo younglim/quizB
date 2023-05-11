@@ -12,13 +12,20 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Viga&display=swap"
       rel="stylesheet"
     />
+    <script
+      async
+      src="https://api.countapi.xyz/hit/google.com/1d486d7e-d8c3-4ec7-aa8b-c2db667f4c4f?callback=websiteVisits"
+    ></script>
   </head>
   <body>
     <div class="container">
       <div id="home" class="flex-column">
         <h1>Are you ready?</h1>
-        <a id="play" onclick="nextPage()" class="btn">Play</a>
+        <a id="play" href="" class="btn">Play</a>
         <br />
+        <h1 class="visibility-hidden">
+          <span id="visitNo"> x</span>
+        </h1>
       </div>
     </div>
     <script src="script.js"></script>

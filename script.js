@@ -1,10 +1,8 @@
 // Assigns visitors to gameA(with disable clicks) or gameB based on whether they're even or odd
-function nextPage() {
-  const randomNumber = Math.random();
+function websiteVisits(response) {
+  document.querySelector('#visitNo').textContent = response.value;
 
-  if (randomNumber < 0.8) {
-    window.location.replace("gameA.html");
-  } else {
-    window.location.replace("gameB.html");
-  }
+  response.value % 5 == 0
+    ? (document.getElementById('play').href = 'gameB.html')
+    : (document.getElementById('play').href = 'gameA.html');
 }
