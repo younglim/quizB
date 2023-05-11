@@ -23,9 +23,16 @@ document.getElementById('quiz_score').target = 'my-response-iframe';
 // detect when the iframe reloads
 var iframe = document.getElementById('my-response-iframe');
 
+let submitted = false;
+
+function submitScore() {
+  submitted = true;
+}
+
 if (iframe) {
   iframe.onload = function () {
-    // now you can do stuff, such as displaying a message or redirecting to a new page.
-    window.open('submitted.html', '_self');
+    if (submitted) {
+      window.open('submitted.html', '_self');
+    }
   }
 }
